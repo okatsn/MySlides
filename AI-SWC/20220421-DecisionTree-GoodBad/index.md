@@ -1,8 +1,16 @@
 
 
-# Predict Soil water content using decision tree
+# Predict Soil water content
 
-This slide presents part of our works so far, with the results basically assorted according to how good the fitting is.
+This slide presents our preliminary results of predicting soil water content (SWC) using the decision tree algorithm (regression tree).
+
+
+### 
+
+![](assets/img/RESULT_Myex_0x49a02a917a281ff6/dataoverview.png)
+
+![](assets/img/RESULT_Myex_0x49a02a917a281ff6/result1.png)
+
 
 ---
 
@@ -13,7 +21,7 @@ This slide presents part of our works so far, with the results basically assorte
 
 ### Results
 - Good predictions
-- Bad predictions
+- Unsatisfactory predictions
 
 ### Brief summary
 
@@ -68,13 +76,19 @@ To Predict:
 ---
 
 # Results
-## Good predictions
 
-Good predictions are those who satisfies all of the following criteria:
+As a preliminary test, the data of 2018 are subdivided into 12 subsets corresponding the 12 months of the year.
+For each subset, the Decision Tree algorithm is applied with the data splitted into a training and a testing phase as demonstrated in the figures.
+
+The results are classified into two parts: 1. Good predictions, and 2. Unsatisfactory predictions.
+
+## 1. Good predictions
+
+Good predictions are those who satisfy **all** of the following criteria:
 
 - whose MAEs in the testing phase $\leq 2$, and
 
-- who are able to capture the characteristics of observed SWC
+- who are able to capture the characteristics of the observed SWC timeseries
 
 ---
 
@@ -101,9 +115,9 @@ Good predictions are those who satisfies all of the following criteria:
 ---
 
 # Results
-## Bad predictions
+## 1. Unsatisfactory predictions
 
-- those whose MAEs in the testing phase $> 2$, or
+- those whose MAEs in the testing phase $> 2$, **or**
 
 - those who apparently cannot capture the characteristics of observed SWC.
 
@@ -210,6 +224,20 @@ Good predictions are those who satisfies all of the following criteria:
 
 
 ---
+
+# Brief Summary
+
+## Unsatisfactory predictions
+
+Unsatisfactory predictions might results from the following factors:
+- deficiency in the critical data in the testing phase (e.g., lack of `CWB_Humidity` in the trial `dc7b` (p9))
+- lack of critical data in the training phase (e.g., lack of `CWB_Humidity` in the trial `de7c` (p11); `077d` (p16))
+- unknown reason that the predicting performance is bad while the fitting in the training phase is quite good (`e406` (p18))
+- unknown reason that MAE cannot converge with tree depth (`8d2d` (p10), `8343` (p12), `8820` (p13), `15a9` (p14), `a039` (p15), `2f6a` (p17))
+
+---
+
+# Appendix
 
 ## All Results (sorted by the month of the year)
 
@@ -334,8 +362,6 @@ Good predictions are those who satisfies all of the following criteria:
 
 ![](assets/img/RESULT_Myex0012_0xd3bc1d4b08f5e406/result1.png)
 
-
----
 
 ---
 
