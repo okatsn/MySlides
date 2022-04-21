@@ -115,7 +115,7 @@ Good predictions are those who satisfy **all** of the following criteria:
 ---
 
 # Results
-## 1. Unsatisfactory predictions
+## 2. Unsatisfactory predictions
 
 - those whose MAEs in the testing phase $> 2$, **or**
 
