@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <textarea id="source">
+````julia
+
+````
+
+---
+
+class: center, middle
+
+# Predict Soil water content
+
+This slide presents our preliminary results of predicting soil water content (SWC) using the decision tree algorithm (regression tree).
+
+---
+
+# Accumulated Precipitation
+
+![](assets/img/Fig_AccumulatedPrecipitations.png)
+
+---
+
+## Outline
+### Description
+- Hyperparameters
+- Features
+
+### Results
+
+---
+
+## Description
+
+
+### Hyperparameters
+
+#### Resampling
+
+  * `TimeSeriesCV` is applied with 48 folds.
+
+#### Partitioning
+
+80.0% of data is applied for training and validation, and 20.0% of data is for testing.
+
+#### Tree depths
+
+2 ≤ max_depth ≤ 20
+
+#### Data shift
+
+The past **1.0 hours** ($t_i, i=-6,...,-1$) data are applied for predicting the future **10.0 minutes** ($t_j, j=+1$) SWC.
+
+
+---
+
+## Description
+
+
+### Features
+
+For training:
+
+  * day ($t_i, i=-6,-5,...,-1$; total 6 variables)
+  * hour ($t_i, i=-6,-5,...,-1$; total 6 variables)
+  * air temperature ($t_i, i=-6,-5,...,-1$; total 6 variables)
+  * Accumulated Precipitation (day) ($t_i, i=-6,-5,...,-1$; total 6 variables)
+  * Accumulated Precipitation (hour) ($t_i, i=-6,-5,...,-1$; total 6 variables)
+  * Accumulated Precipitation (10 mins) ($t_i, i=-6,-5,...,-1$; total 6 variables)
+
+To Predict:
+
+  * `"Soil_water_content_10cm_t"`
+
+
+---
+
+## Description
+
+
+### Keynotes
+
+  * add accumulated precipitation of the day and hour
+  * Preprocessing: Impute missing values with mean.
+
+
+---
+class: center, middle
+# Results
+
+As a preliminary test, the data of 2018 are subdivided into 12 subsets corresponding the 12 months of the year.
+For each subset, the Decision Tree algorithm is applied with the data splitted into a training and a testing phase as demonstrated in the figures.
+
+---
+class: left, middle
+# The whole year of 2018
+
+---
+
+
+# The whole year of 2018
+
+The past **1.0 hours** ($t_i, i=-6,...,-1$) data are applied for predicting the future **10.0 minutes** ($t_j, j=+1$) SWC. ; 48 folds.
+
+![](assets/img/2018WholeYear/dataoverview.png)
+
+![](assets/img/2018WholeYear/result1.png)
+
+
+---
+class: left, middle
+# Month-by-month
+
+---
+
+
+### Data overview
+
+![](assets/img/RESULT_Myex0001_0x45c6f1b2492e559d/dataoverview.png)
+
+### Prediction and Tree Depth－loss Relation (559d)
+
+![](assets/img/RESULT_Myex0001_0x45c6f1b2492e559d/result1.png)
+
+---
+
+### Data overview
+
+![](assets/img/RESULT_Myex0002_0x4ef2e4c3da546845/dataoverview.png)
+
+### Prediction and Tree Depth－loss Relation (6845)
+
+![](assets/img/RESULT_Myex0002_0x4ef2e4c3da546845/result1.png)
+
+---
+
+### Data overview
+
+![](assets/img/RESULT_Myex0003_0xa7c7938230d7a352/dataoverview.png)
+
+### Prediction and Tree Depth－loss Relation (a352)
+
+![](assets/img/RESULT_Myex0003_0xa7c7938230d7a352/result1.png)
+
+---
+
+### Data overview
+
+![](assets/img/RESULT_Myex0004_0xbf73963e9d64b0cf/dataoverview.png)
+
+### Prediction and Tree Depth－loss Relation (b0cf)
+
+![](assets/img/RESULT_Myex0004_0xbf73963e9d64b0cf/result1.png)
+
+---
+
+### Data overview
+
+![](assets/img/RESULT_Myex0005_0x33c85a20752776e2/dataoverview.png)
+
+### Prediction and Tree Depth－loss Relation (76e2)
+
+![](assets/img/RESULT_Myex0005_0x33c85a20752776e2/result1.png)
+
+---
+
+### Data overview
+
+![](assets/img/RESULT_Myex0006_0x38c834b2d278c714/dataoverview.png)
+
+### Prediction and Tree Depth－loss Relation (c714)
+
+![](assets/img/RESULT_Myex0006_0x38c834b2d278c714/result1.png)
+
+---
+
+### Data overview
+
+![](assets/img/RESULT_Myex0007_0xf345a78cbf3997a7/dataoverview.png)
+
+### Prediction and Tree Depth－loss Relation (97a7)
+
+![](assets/img/RESULT_Myex0007_0xf345a78cbf3997a7/result1.png)
+
+---
+
+### Data overview
+
+![](assets/img/RESULT_Myex0008_0xa35b20115da58dcd/dataoverview.png)
+
+### Prediction and Tree Depth－loss Relation (8dcd)
+
+![](assets/img/RESULT_Myex0008_0xa35b20115da58dcd/result1.png)
+
+---
+
+### Data overview
+
+![](assets/img/RESULT_Myex0009_0x3330fd08a04d3800/dataoverview.png)
+
+### Prediction and Tree Depth－loss Relation (3800)
+
+![](assets/img/RESULT_Myex0009_0x3330fd08a04d3800/result1.png)
+
+---
+
+### Data overview
+
+![](assets/img/RESULT_Myex0010_0x8d812f135318fc81/dataoverview.png)
+
+### Prediction and Tree Depth－loss Relation (fc81)
+
+![](assets/img/RESULT_Myex0010_0x8d812f135318fc81/result1.png)
+
+---
+
+### Data overview
+
+![](assets/img/RESULT_Myex0011_0x5c3ec09a616995a5/dataoverview.png)
+
+### Prediction and Tree Depth－loss Relation (95a5)
+
+![](assets/img/RESULT_Myex0011_0x5c3ec09a616995a5/result1.png)
+
+---
+
+### Data overview
+
+![](assets/img/RESULT_Myex0012_0x2750bb3a5da96c35/dataoverview.png)
+
+### Prediction and Tree Depth－loss Relation (6c35)
+
+![](assets/img/RESULT_Myex0012_0x2750bb3a5da96c35/result1.png)
+
+
+---
+class: left, middle
+# The periodic pattern of predicted SWC in some cases
+
+---
+
+![](assets/img/zoom_testing_1.png)
+![](assets/img/zoom_testing_2.png)
+![](assets/img/zoom_testing_3.png)
+
+---
+
+*This page was generated using [Literate.jl](https://github.com/fredrikekre/Literate.jl).*
+
+    </textarea>
+
+    <script src="remark.min.js" type="text/javascript"></script>
+    <script src="katex.min.js"></script>
+    <script src="auto-render.min.js"></script>
+    <link rel="stylesheet" href="katex.min.css">
+    <script type="text/javascript">
+        var options = {};
+        var renderMath = function() {
+        // renderMathInElement(document.body);
+        // or if you want to use $...$ for math,
+        renderMathInElement(document.body, {delimiters: [ // mind the order of delimiters(!?)
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "\\(", right: "\\)", display: false},
+        ]});
+        }
+
+        var slideshow = remark.create(options, renderMath);
+
+        </script>
+  </body>
+</html>
