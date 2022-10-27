@@ -1,0 +1,4 @@
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+FileTools = "2c042965-b292-4a40-a4a9-3abf2d00bee5"
+LocalRegistry = "89398ba2-070a-4b16-a995-9893c55d93cf"
