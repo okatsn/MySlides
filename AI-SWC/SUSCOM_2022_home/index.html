@@ -1,1401 +1,454 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-		<title>README</title>
-		<style>
-			/* PDF Specific */
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\HSI\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.3\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
 
-@media print {
-  body {
-    min-width: initial;
-    max-width: 100%;
-    margin: 0 auto;
-  }
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 
-/* General */
-
-.octicon {
-  display: inline-block;
-  fill: currentColor;
-  vertical-align: text-bottom;
-}
-
-.anchor {
-  float: left;
-  line-height: 1;
-  margin-left: -20px;
-  padding-right: 4px;
-}
-
-.anchor:focus {
-  outline: none;
-}
-
-h1 .octicon-link,
-h2 .octicon-link,
-h3 .octicon-link,
-h4 .octicon-link,
-h5 .octicon-link,
-h6 .octicon-link {
-  color: #1b1f23;
-  vertical-align: middle;
-  visibility: hidden;
-}
-
-h1:hover .anchor,
-h2:hover .anchor,
-h3:hover .anchor,
-h4:hover .anchor,
-h5:hover .anchor,
-h6:hover .anchor {
-  text-decoration: none;
-}
-
-h1:hover .anchor .octicon-link,
-h2:hover .anchor .octicon-link,
-h3:hover .anchor .octicon-link,
-h4:hover .anchor .octicon-link,
-h5:hover .anchor .octicon-link,
-h6:hover .anchor .octicon-link {
-  visibility: visible;
-}
-
-h1:hover .anchor .octicon-link:before,
-h2:hover .anchor .octicon-link:before,
-h3:hover .anchor .octicon-link:before,
-h4:hover .anchor .octicon-link:before,
-h5:hover .anchor .octicon-link:before,
-h6:hover .anchor .octicon-link:before {
-  width: 16px;
-  height: 16px;
-  content: ' ';
-  display: inline-block;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
-}
-
-body {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-print-color-adjust: exact;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #24292e;
-  word-wrap: break-word;
-  box-sizing: border-box;
-  min-width: 200px;
-  max-width: 980px;
-  margin: 1rem auto;
-}
-
-details {
-  display: block;
-}
-
-summary {
-  display: list-item;
-}
-
-a {
-  background-color: initial;
-}
-
-a:active,
-a:hover {
-  outline-width: 0;
-}
-
-strong {
-  font-weight: inherit;
-  font-weight: bolder;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-img {
-  border-style: none;
-}
-
-code,
-kbd,
-pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-hr {
-  box-sizing: initial;
-  height: 0;
-  overflow: visible;
-}
-
-input {
-  font: inherit;
-  margin: 0;
-}
-
-input {
-  overflow: visible;
-}
-
-[type='checkbox'] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-input {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-a {
-  color: #0366d6;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-strong {
-  font-weight: 600;
-}
-
-hr {
-  height: 0;
-  margin: 15px 0;
-  overflow: hidden;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #dfe2e5;
-}
-
-hr:after,
-hr:before {
-  display: table;
-  content: '';
-}
-
-hr:after {
-  clear: both;
-}
-
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
-td,
-th {
-  padding: 0;
-}
-
-details summary {
-  cursor: pointer;
-}
-
-kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  line-height: 10px;
-  color: #444d56;
-  vertical-align: middle;
-  background-color: #fafbfc;
-  border: 1px solid #d1d5da;
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
   border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #d1d5da;
+  /* background: #fff; */
+  background: #f5f5f5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-  margin-bottom: 0;
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
 }
 
-h1 {
-  font-size: 32px;
+.token.comment,
+.token.blockquote {
+  color: #969896;
 }
 
-h1,
-h2 {
-  font-weight: 600;
+.token.cdata {
+  color: #183691;
 }
 
-h2 {
-  font-size: 24px;
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
 }
 
-h3 {
-  font-size: 20px;
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
 }
 
-h3,
-h4 {
-  font-weight: 600;
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
 }
 
-h4 {
-  font-size: 16px;
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
 }
 
-h5 {
-  font-size: 14px;
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
 }
 
-h5,
-h6 {
-  font-weight: 600;
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
 }
 
-h6 {
-  font-size: 12px;
+.token.entity {
+  cursor: help;
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: 10px;
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
 }
 
-blockquote {
-  margin: 0;
+.token.list {
+  color: #ed6a43;
 }
 
-ol,
-ul {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
 }
 
-ol ol,
-ul ol {
-  list-style-type: lower-roman;
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
 }
 
-ol ol ol,
-ol ul ol,
-ul ol ol,
-ul ul ol {
-  list-style-type: lower-alpha;
+.token.bold {
+  font-weight: bold;
 }
 
-dd {
-  margin-left: 0;
+.token.italic {
+  font-style: italic;
 }
 
-code,
-pre {
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  font-size: 12px;
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
 }
 
-pre {
-  margin-top: 0;
-  margin-bottom: 0;
+.language-markup .token.tag .token.punctuation {
+  color: #333;
 }
 
-input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  appearance: none;
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
 }
 
-:checked + .radio-label {
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
   position: relative;
-  z-index: 1;
-  border-color: #0366d6;
-}
-
-.border {
-  border: 1px solid #e1e4e8 !important;
-}
-
-.border-0 {
-  border: 0 !important;
-}
-
-.border-bottom {
-  border-bottom: 1px solid #e1e4e8 !important;
-}
-
-.rounded-1 {
-  border-radius: 3px !important;
-}
-
-.bg-white {
-  background-color: #fff !important;
-}
-
-.bg-gray-light {
-  background-color: #fafbfc !important;
-}
-
-.text-gray-light {
-  color: #6a737d !important;
-}
-
-.mb-0 {
-  margin-bottom: 0 !important;
-}
-
-.my-2 {
-  margin-top: 8px !important;
-  margin-bottom: 8px !important;
-}
-
-.pl-0 {
-  padding-left: 0 !important;
-}
-
-.py-0 {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-.pl-1 {
-  padding-left: 4px !important;
-}
-
-.pl-2 {
-  padding-left: 8px !important;
-}
-
-.py-2 {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-}
-
-.pl-3,
-.px-3 {
-  padding-left: 16px !important;
-}
-
-.px-3 {
-  padding-right: 16px !important;
-}
-
-.pl-4 {
-  padding-left: 24px !important;
-}
-
-.pl-5 {
-  padding-left: 32px !important;
-}
-
-.pl-6 {
-  padding-left: 40px !important;
-}
-
-.f6 {
-  font-size: 12px !important;
-}
-
-.lh-condensed {
-  line-height: 1.25 !important;
-}
-
-.text-bold {
-  font-weight: 600 !important;
-}
-
-.pl-c {
-  color: #6a737d;
-}
-
-.pl-c1,
-.pl-s .pl-v {
-  color: #005cc5;
-}
-
-.pl-e,
-.pl-en {
-  color: #6f42c1;
-}
-
-.pl-s .pl-s1,
-.pl-smi {
-  color: #24292e;
-}
-
-.pl-ent {
-  color: #22863a;
-}
-
-.pl-k {
-  color: #d73a49;
-}
-
-.pl-pds,
-.pl-s,
-.pl-s .pl-pse .pl-s1,
-.pl-sr,
-.pl-sr .pl-cce,
-.pl-sr .pl-sra,
-.pl-sr .pl-sre {
-  color: #032f62;
-}
-
-.pl-smw,
-.pl-v {
-  color: #e36209;
-}
-
-.pl-bu {
-  color: #b31d28;
-}
-
-.pl-ii {
-  color: #fafbfc;
-  background-color: #b31d28;
-}
-
-.pl-c2 {
-  color: #fafbfc;
-  background-color: #d73a49;
-}
-
-.pl-c2:before {
-  content: '^M';
-}
-
-.pl-sr .pl-cce {
-  font-weight: 700;
-  color: #22863a;
-}
-
-.pl-ml {
-  color: #735c0f;
-}
-
-.pl-mh,
-.pl-mh .pl-en,
-.pl-ms {
-  font-weight: 700;
-  color: #005cc5;
-}
-
-.pl-mi {
-  font-style: italic;
-  color: #24292e;
-}
-
-.pl-mb {
-  font-weight: 700;
-  color: #24292e;
-}
-
-.pl-md {
-  color: #b31d28;
-  background-color: #ffeef0;
-}
-
-.pl-mi1 {
-  color: #22863a;
-  background-color: #f0fff4;
-}
-
-.pl-mc {
-  color: #e36209;
-  background-color: #ffebda;
-}
-
-.pl-mi2 {
-  color: #f6f8fa;
-  background-color: #005cc5;
-}
-
-.pl-mdr {
-  font-weight: 700;
-  color: #6f42c1;
-}
-
-.pl-ba {
-  color: #586069;
-}
-
-.pl-sg {
-  color: #959da5;
-}
-
-.pl-corl {
-  text-decoration: underline;
-  color: #032f62;
-}
-
-.mb-0 {
-  margin-bottom: 0 !important;
-}
-
-.my-2 {
-  margin-bottom: 8px !important;
-}
-
-.my-2 {
-  margin-top: 8px !important;
-}
-
-.pl-0 {
-  padding-left: 0 !important;
-}
-
-.py-0 {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-.pl-1 {
-  padding-left: 4px !important;
-}
-
-.pl-2 {
-  padding-left: 8px !important;
-}
-
-.py-2 {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-}
-
-.pl-3 {
-  padding-left: 16px !important;
-}
-
-.pl-4 {
-  padding-left: 24px !important;
-}
-
-.pl-5 {
-  padding-left: 32px !important;
-}
-
-.pl-6 {
-  padding-left: 40px !important;
-}
-
-.pl-7 {
-  padding-left: 48px !important;
-}
-
-.pl-8 {
-  padding-left: 64px !important;
-}
-
-.pl-9 {
-  padding-left: 80px !important;
-}
-
-.pl-10 {
-  padding-left: 96px !important;
-}
-
-.pl-11 {
-  padding-left: 112px !important;
-}
-
-.pl-12 {
-  padding-left: 128px !important;
-}
-
-hr {
-  border-bottom-color: #eee;
-}
-
-kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  line-height: 10px;
-  color: #444d56;
-  vertical-align: middle;
-  background-color: #fafbfc;
-  border: 1px solid #d1d5da;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #d1d5da;
-}
-
-body:after,
-body:before {
-  display: table;
-  content: '';
-}
-
-body:after {
-  clear: both;
-}
-
-body > :first-child {
-  margin-top: 0 !important;
-}
-
-body > :last-child {
-  margin-bottom: 0 !important;
-}
-
-a:not([href]) {
-  color: inherit;
-  text-decoration: none;
-}
-
-blockquote,
-details,
-dl,
-ol,
-p,
-pre,
-table,
-ul {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-
-hr {
-  height: 0.25em;
-  padding: 0;
-  margin: 24px 0;
-  background-color: #e1e4e8;
-  border: 0;
-}
-
-blockquote {
-  padding: 0 1em;
-  color: #6a737d;
-  border-left: 0.25em solid #dfe2e5;
-}
-
-blockquote > :first-child {
-  margin-top: 0;
-}
-
-blockquote > :last-child {
-  margin-bottom: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 24px;
-  margin-bottom: 16px;
-  font-weight: 600;
-  line-height: 1.25;
-}
-
-h1 {
-  font-size: 2em;
-}
-
-h1,
-h2 {
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #eaecef;
-}
-
-h2 {
-  font-size: 1.5em;
-}
-
-h3 {
-  font-size: 1.25em;
-}
-
-h4 {
-  font-size: 1em;
-}
-
-h5 {
-  font-size: 0.875em;
-}
-
-h6 {
-  font-size: 0.85em;
-  color: #6a737d;
-}
-
-ol,
-ul {
-  padding-left: 2em;
-}
-
-ol ol,
-ol ul,
-ul ol,
-ul ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-li {
-  word-wrap: break-all;
-}
-
-li > p {
-  margin-top: 16px;
-}
-
-li + li {
-  margin-top: 0.25em;
-}
-
-dl {
-  padding: 0;
-}
-
-dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: 600;
-}
-
-dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-
-table {
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
   display: block;
   width: 100%;
-  overflow: auto;
 }
 
-table th {
-  font-weight: 600;
-}
-
-table td,
-table th {
-  padding: 6px 13px;
-  border: 1px solid #dfe2e5;
-}
-
-table tr {
-  background-color: #fff;
-  border-top: 1px solid #c6cbd1;
-}
-
-table tr:nth-child(2n) {
-  background-color: #f6f8fa;
-}
-
-img {
-  max-width: 80%;
-  box-sizing: initial;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #fff;
-}
-
-code {
-  padding: 0.2em 0.4em;
-  margin: 0;
-  font-size: 85%;
-  background-color: rgba(27, 31, 35, 0.05);
-  border-radius: 3px;
-}
-
-pre {
-  word-wrap: normal;
-}
-
-pre > code {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0;
-}
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  color: #333;
-  -webkit-print-color-adjust: exact;
-  background: #f8f8f8;
-}
-
-.hljs pre {
-  margin-bottom: 0;
-  word-break: normal;
-}
-
-.hljs pre,
-pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f6f8fa;
-  -webkit-print-color-adjust: exact;
-
-  border-radius: 3px;
-}
-
-pre code {
-  display: inline;
-  max-width: auto;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
   line-height: inherit;
-  word-wrap: normal;
-  background-color: initial;
-  border: 0;
-}
-
-.commit-tease-sha {
-  display: inline-block;
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  font-size: 90%;
-  color: #444d56;
-}
-
-.full-commit .btn-outline:not(:disabled):hover {
-  color: #005cc5;
-  border-color: #005cc5;
-}
-
-.blob-wrapper {
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-.blob-wrapper-embedded {
-  max-height: 240px;
-  overflow-y: auto;
-}
-
-.blob-num {
-  width: 1%;
-  min-width: 50px;
-  padding-right: 10px;
-  padding-left: 10px;
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  font-size: 12px;
-  line-height: 20px;
-  color: rgba(27, 31, 35, 0.3);
-  text-align: right;
-  white-space: nowrap;
-  vertical-align: top;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.blob-num:hover {
-  color: rgba(27, 31, 35, 0.6);
-}
-
-.blob-num:before {
-  content: attr(data-line-number);
-}
-
-.blob-code {
-  position: relative;
-  padding-right: 10px;
-  padding-left: 10px;
-  line-height: 20px;
-  vertical-align: top;
-}
-
-.blob-code-inner {
-  overflow: visible;
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  font-size: 12px;
-  color: #24292e;
-  word-wrap: normal;
   white-space: pre;
 }
 
-.pl-token.active,
-.pl-token:hover {
-  cursor: pointer;
-  background: #ffea7f;
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
 }
 
-.tab-size[data-tab-size='1'] {
-  -moz-tab-size: 1;
-  tab-size: 1;
-}
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 
-.tab-size[data-tab-size='2'] {
-  -moz-tab-size: 2;
-  tab-size: 2;
-}
-
-.tab-size[data-tab-size='3'] {
-  -moz-tab-size: 3;
-  tab-size: 3;
-}
-
-.tab-size[data-tab-size='4'] {
-  -moz-tab-size: 4;
-  tab-size: 4;
-}
-
-.tab-size[data-tab-size='5'] {
-  -moz-tab-size: 5;
-  tab-size: 5;
-}
-
-.tab-size[data-tab-size='6'] {
-  -moz-tab-size: 6;
-  tab-size: 6;
-}
-
-.tab-size[data-tab-size='7'] {
-  -moz-tab-size: 7;
-  tab-size: 7;
-}
-
-.tab-size[data-tab-size='8'] {
-  -moz-tab-size: 8;
-  tab-size: 8;
-}
-
-.tab-size[data-tab-size='9'] {
-  -moz-tab-size: 9;
-  tab-size: 9;
-}
-
-.tab-size[data-tab-size='10'] {
-  -moz-tab-size: 10;
-  tab-size: 10;
-}
-
-.tab-size[data-tab-size='11'] {
-  -moz-tab-size: 11;
-  tab-size: 11;
-}
-
-.tab-size[data-tab-size='12'] {
-  -moz-tab-size: 12;
-  tab-size: 12;
-}
-
-.task-list-item {
-  list-style-type: none;
-}
-
-.task-list-item + .task-list-item {
-  margin-top: 3px;
-}
-
-.task-list-item input {
-  margin: 0 0.2em 0.25em -1.6em;
-  vertical-align: middle;
-}
-/*
-github.com style (c) Vasily Polovnyov <vast@whiteants.net>
-*/
-  
-  .hljs-comment,
-  .hljs-quote {
-    color: #998;
-    font-style: italic;
-  }
-  
-  .hljs-keyword,
-  .hljs-selector-tag,
-  .hljs-subst {
-    color: #333;
-    font-weight: bold;
-  }
-  
-  .hljs-number,
-  .hljs-literal,
-  .hljs-variable,
-  .hljs-template-variable,
-  .hljs-tag .hljs-attr {
-    color: #008080;
-  }
-  
-  .hljs-string,
-  .hljs-doctag {
-    color: #d14;
-  }
-  
-  .hljs-title,
-  .hljs-section,
-  .hljs-selector-id {
-    color: #900;
-    font-weight: bold;
-  }
-  
-  .hljs-subst {
-    font-weight: normal;
-  }
-  
-  .hljs-type,
-  .hljs-class .hljs-title {
-    color: #458;
-    font-weight: bold;
-  }
-  
-  .hljs-tag,
-  .hljs-name,
-  .hljs-attribute {
-    color: #000080;
-    font-weight: normal;
-  }
-  
-  .hljs-regexp,
-  .hljs-link {
-    color: #009926;
-  }
-  
-  .hljs-symbol,
-  .hljs-bullet {
-    color: #990073;
-  }
-  
-  .hljs-built_in,
-  .hljs-builtin-name {
-    color: #0086b3;
-  }
-  
-  .hljs-meta {
-    color: #999;
-    font-weight: bold;
-  }
-  
-  .hljs-deletion {
-    background: #fdd;
-  }
-  
-  .hljs-addition {
-    background: #dfd;
-  }
-  
-  .hljs-emphasis {
-    font-style: italic;
-  }
-  
-  .hljs-strong {
-    font-weight: bold;
-  }
-		</style>
-	</head>
-	<body>
-		<nav id="table-of-contents">
-			<ul><li><a href="#suscom-%E6%8A%95%E7%A8%BF%E6%96%87%E7%AB%A0%E5%8D%94%E4%BD%9C%E6%8C%87%E5%8D%97"> SUSCOM 投稿文章協作指南</a><ul><li><a href="#%E5%88%86%E5%B7%A5%E6%A6%82%E8%A6%BD"> 分工概覽</a></li><li><a href="#%E7%B7%A8%E8%BC%AF"> 編輯</a><ul><li><a href="#%E5%9C%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E6%93%8D%E4%BD%9C%E8%88%87%E7%B7%A8%E8%BC%AF"> 在瀏覽器操作與編輯</a></li><li><a href="#%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%AB%AF%E6%93%8D%E4%BD%9C%E8%88%87%E7%B7%A8%E8%BC%AF"> 在本地端操作與編輯</a></li><li><a href="#%E5%9C%96%E7%89%87%E8%88%87%E8%A1%A8%E6%A0%BC"> 圖片與表格</a><ul><li><a href="#%E9%81%B8%E6%93%87%E6%80%A7-%E5%9C%96%E8%A1%A8%E8%88%87%E6%96%B9%E7%A8%8B%E5%BC%8F%E4%BA%A4%E4%BA%92%E5%8F%83%E7%85%A7%E6%8C%87%E5%8D%97"> 選擇性-圖表與方程式交互參照指南</a><ul><li><a href="#%E5%9C%96%E8%88%87%E8%A1%A8"> 圖與表</a></li><li><a href="#%E6%96%B9%E7%A8%8B%E5%BC%8F"> 方程式</a></li></ul></li></ul></li></ul></li><li><a href="#%E5%8F%83%E8%80%83%E6%96%87%E7%8D%BB"> 參考文獻</a></li><li><a href="#%E5%85%A7%E9%83%A8%E8%A8%8E%E8%AB%96%E4%BE%8B%E6%9C%83"> 內部討論/例會</a><ul><li><a href="#2022-10-26"> 2022-10-26</a></li><li><a href="#2022-11-23"> 2022-11-23</a><ul><li><a href="#%E8%A8%8E%E8%AB%96%E8%A6%81%E9%BB%9E"> 討論要點</a></li><li><a href="#%E7%9B%B8%E9%97%9C%E5%B7%A5%E4%BD%9C%E5%88%86%E6%B4%BE%E5%82%99%E5%BF%98%E9%8C%84"> 相關工作分派備忘錄</a></li></ul></li><li><a href="#2022-12-21"> 2022-12-21</a><ul><li><a href="#%E8%A8%8E%E8%AB%96%E8%AD%B0%E9%A1%8C%E6%91%98%E8%A6%81"> 討論議題摘要</a></li><li><a href="#%E8%AD%B0%E9%A1%8C1-%E5%BB%B6%E6%99%82%E5%B0%8D%E6%A8%A1%E5%9E%8B%E8%A1%A8%E7%8F%BE%E7%9A%84%E5%BD%B1%E9%9F%BF-%E5%9C%96xx"> 議題1: 延時對模型表現的影響 (圖XX)</a></li><li><a href="#%E8%AD%B0%E9%A1%8C2-%E7%89%B9%E5%BE%B5%E9%87%8D%E8%A6%81%E6%80%A7%E5%88%86%E6%9E%90"> 議題2: 特徵重要性分析</a></li><li><a href="#%E5%85%B6%E4%BB%96%E9%9B%9C%E9%A0%85%E5%B7%A5%E4%BD%9C"> 其他雜項工作</a></li></ul></li></ul></li><li><a href="#%E6%96%87%E7%AB%A0%E6%9E%B6%E6%A7%8B-2023-01-09-%E6%9B%B4%E6%96%B0"> 文章架構 (2023-01-09 更新)</a><ul><li><a href="#%E7%B7%92%E8%AB%96"> 緒論</a></li><li><a href="#%E8%B3%87%E6%96%99"> 資料</a></li><li><a href="#%E6%96%B9%E6%B3%95"> 方法</a></li><li><a href="#%E8%A8%8E%E8%AB%96"> 討論</a></li><li><a href="#%E7%B5%90%E8%AB%96"> 結論</a></li></ul></li><li><a href="#my-checklist-for-submission"> My Checklist for submission</a></li></ul></li></ul>
-		</nav>
-		<main>
-			<h1 id="suscom-%E6%8A%95%E7%A8%BF%E6%96%87%E7%AB%A0%E5%8D%94%E4%BD%9C%E6%8C%87%E5%8D%97" tabindex="-1"><a class="anchor" href="#suscom-%E6%8A%95%E7%A8%BF%E6%96%87%E7%AB%A0%E5%8D%94%E4%BD%9C%E6%8C%87%E5%8D%97" aria-hidden="true"><span class="octicon octicon-link"></span></a> SUSCOM 投稿文章協作指南</h1>
-<p>各位老師助理同學好，SUSCOM 投稿文章相關之所有檔案將放置在 Google 雲端的<a href="https://drive.google.com/drive/folders/1XY_vdeaVPidS00I_7p4S6mSBtTrc4VDS?usp=sharing">TWAI\TWAI 土壤水相關內部討論\SUSCOM_2022</a>共用資料夾。建議接續在已幫您建立好的 google 文件 (副檔名為 .gdoc) 編輯或自行創建純文字檔搭配圖片、試算表檔案。如需權限或有其他技術問題請洽宗羲。</p>
-<p>注意事項：</p>
-<blockquote>
-<p>⚠️ 請不要將 google 文件另存為 WORD 檔 (.doc, .docx)</p>
-<p>⚠️ 請不要用 google 文件開啟既有 WORD 檔</p>
-<p>★ 如果您想要使用 WORD 編輯，請依循 <a href="#%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%AB%AF%E6%93%8D%E4%BD%9C%E8%88%87%E7%B7%A8%E8%BC%AF">在本地端操作與編輯</a> 操作，在本地新增 WORD 檔案。</p>
-</blockquote>
-<p>非常感謝您的耐心閱讀與悉心配合。</p>
-<blockquote>
-<p>★ 在內部會議討論的重點摘要、分工事項等，會及時更新於本指南。本指南提供兩個版本，分別為<a href="https://drive.google.com/drive/folders/1XY_vdeaVPidS00I_7p4S6mSBtTrc4VDS?usp=sharing">共用資料夾</a> 中的 <a href="https://drive.google.com/file/d/1b1ODaw0Zn3ah8Tt-w6ejOE3Trvc34rfY/view?usp=sharing">PDF 版(README.pdf)</a> 以及 <a href="https://okatsn.github.io/MySlides/AI-SWC/SUSCOM_2022_home/">網頁版</a>；兩者會即時同步擇一關注即可。</p>
-</blockquote>
-<h2 id="%E5%88%86%E5%B7%A5%E6%A6%82%E8%A6%BD" tabindex="-1"><a class="anchor" href="#%E5%88%86%E5%B7%A5%E6%A6%82%E8%A6%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a> 分工概覽</h2>
-<p>陳沛芫</p>
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <ul>
+<li><a href="#suscom-%E6%8A%95%E7%A8%BF%E6%96%87%E7%AB%A0%E5%8D%94%E4%BD%9C%E6%8C%87%E5%8D%97">SUSCOM &#x6295;&#x7A3F;&#x6587;&#x7AE0;&#x5354;&#x4F5C;&#x6307;&#x5357;</a>
 <ul>
-<li>part of introduction and discussion</li>
-<li>詳見 <a href="https://docs.google.com/document/d/19l3MgkAGRhQqz2akin7eVNjY6uqBZW-29UvFYb5ZnAE/edit?usp=sharing">Manuscript-陳沛芫.gdoc</a></li>
-</ul>
-<p>鍾孟儒</p>
+<li><a href="#%E7%B7%A8%E8%BC%AF">&#x7DE8;&#x8F2F;</a>
 <ul>
-<li>data and site</li>
-<li>詳見 <a href="https://docs.google.com/document/d/1G9Rp9hLcK2rt9dE2M2Q4w5j3-56OEOIQe_0_SQ6lNs0/edit?usp=sharing">Manuscript-鍾孟儒.gdoc</a></li>
-</ul>
-<p>王俞凱</p>
+<li><a href="#%E5%9C%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E6%93%8D%E4%BD%9C%E8%88%87%E7%B7%A8%E8%BC%AF">&#x5728;&#x700F;&#x89BD;&#x5668;&#x64CD;&#x4F5C;&#x8207;&#x7DE8;&#x8F2F;</a></li>
+<li><a href="#%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%AB%AF%E6%93%8D%E4%BD%9C%E8%88%87%E7%B7%A8%E8%BC%AF">&#x5728;&#x672C;&#x5730;&#x7AEF;&#x64CD;&#x4F5C;&#x8207;&#x7DE8;&#x8F2F;</a></li>
+<li><a href="#%E5%9C%96%E7%89%87%E8%88%87%E8%A1%A8%E6%A0%BC">&#x5716;&#x7247;&#x8207;&#x8868;&#x683C;</a>
 <ul>
-<li>data exploration：特徵經不同時間平移後變數間的交相關性</li>
-<li>詳見 <a href="https://docs.google.com/document/d/1tKHRfyzmEbBn9UCVCO-jxqmG-5aF7Rl9O5pHclwKXeU/edit?usp=sharing">Manuscript-王俞凱</a></li>
-</ul>
-<p>吳宗羲</p>
+<li><a href="#%E9%81%B8%E6%93%87%E6%80%A7-%E5%9C%96%E8%A1%A8%E8%88%87%E6%96%B9%E7%A8%8B%E5%BC%8F%E4%BA%A4%E4%BA%92%E5%8F%83%E7%85%A7%E6%8C%87%E5%8D%97">&#x9078;&#x64C7;&#x6027;-&#x5716;&#x8868;&#x8207;&#x65B9;&#x7A0B;&#x5F0F;&#x4EA4;&#x4E92;&#x53C3;&#x7167;&#x6307;&#x5357;</a>
 <ul>
-<li>method, results and the rest of introduction and discussion section</li>
-<li>文章的整合與合併者；相關檔案會隨文章發展更新於。<a href="https://drive.google.com/drive/folders/1XY_vdeaVPidS00I_7p4S6mSBtTrc4VDS?usp=sharing">共用資料夾</a>。</li>
-</ul>
-<h2 id="%E7%B7%A8%E8%BC%AF" tabindex="-1"><a class="anchor" href="#%E7%B7%A8%E8%BC%AF" aria-hidden="true"><span class="octicon octicon-link"></span></a> 編輯</h2>
-<p>請參考<a href="#%E5%88%86%E5%B7%A5%E6%A6%82%E8%A6%BD">分工概覽</a> 以及，<a href="#2022-10-26">內部討論 2022-10-26</a>的結論，撰寫相關內容。</p>
-<h3 id="%E5%9C%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E6%93%8D%E4%BD%9C%E8%88%87%E7%B7%A8%E8%BC%AF" tabindex="-1"><a class="anchor" href="#%E5%9C%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E6%93%8D%E4%BD%9C%E8%88%87%E7%B7%A8%E8%BC%AF" aria-hidden="true"><span class="octicon octicon-link"></span></a> 在瀏覽器操作與編輯</h3>
-<p>文本編輯</p>
-<ul>
-<li>以瀏覽器開啟<a href="https://drive.google.com/drive/folders/1XY_vdeaVPidS00I_7p4S6mSBtTrc4VDS?usp=sharing">共用資料夾</a> (需登入您可存取 TWAI 共用資料夾的 google 帳號)</li>
-<li>有被具體分配工作的成員：
-<ul>
-<li>點擊 Manuscript開頭的 .gdoc 檔案 (例如，<code>Manuscript-鍾孟儒</code>)開始編輯。</li>
+<li><a href="#%E5%9C%96%E8%88%87%E8%A1%A8">&#x5716;&#x8207;&#x8868;</a></li>
+<li><a href="#%E6%96%B9%E7%A8%8B%E5%BC%8F">&#x65B9;&#x7A0B;&#x5F0F;</a></li>
 </ul>
 </li>
-<li>還沒被具體分配工作的成員：
-<ul>
-<li>點擊左上角(google雲端硬碟標誌下方)的新增按鈕，新增新的 google 文件後開始編輯。</li>
 </ul>
 </li>
-<li>我們可以藉由註解於他人的 google 文件進行溝通。</li>
 </ul>
+</li>
+<li><a href="#%E5%8F%83%E8%80%83%E6%96%87%E7%8D%BB">&#x53C3;&#x8003;&#x6587;&#x737B;</a></li>
+<li><a href="#%E5%88%86%E5%B7%A5%E6%A6%82%E8%A6%BD">&#x5206;&#x5DE5;&#x6982;&#x89BD;</a></li>
+<li><a href="#%E5%85%A7%E9%83%A8%E8%A8%8E%E8%AB%96%E4%BE%8B%E6%9C%83">&#x5167;&#x90E8;&#x8A0E;&#x8AD6;/&#x4F8B;&#x6703;</a>
+<ul>
+<li><a href="#2022-10-26">2022-10-26</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 class="mume-header" id="suscom-%E6%8A%95%E7%A8%BF%E6%96%87%E7%AB%A0%E5%8D%94%E4%BD%9C%E6%8C%87%E5%8D%97">SUSCOM &#x6295;&#x7A3F;&#x6587;&#x7AE0;&#x5354;&#x4F5C;&#x6307;&#x5357;</h1>
+
+<p>&#x5404;&#x4F4D;&#x8001;&#x5E2B;&#x52A9;&#x7406;&#x540C;&#x5B78;&#x597D;&#xFF0C;SUSCOM &#x6295;&#x7A3F;&#x6587;&#x7AE0;&#x76F8;&#x95DC;&#x4E4B;&#x6240;&#x6709;&#x6A94;&#x6848;&#x5C07;&#x653E;&#x7F6E;&#x5728; Google &#x96F2;&#x7AEF;&#x7684;<a href="https://drive.google.com/drive/folders/1XY_vdeaVPidS00I_7p4S6mSBtTrc4VDS?usp=sharing">TWAI\TWAI &#x571F;&#x58E4;&#x6C34;&#x76F8;&#x95DC;&#x5167;&#x90E8;&#x8A0E;&#x8AD6;\SUSCOM_2022</a>&#x5171;&#x7528;&#x8CC7;&#x6599;&#x593E;&#x3002;&#x5982;&#x9700;&#x6B0A;&#x9650;&#x6216;&#x6709;&#x5176;&#x4ED6;&#x6280;&#x8853;&#x554F;&#x984C;&#x8ACB;&#x6D3D;&#x5B97;&#x7FB2;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#x4E8B;&#x9805;&#xFF1A;</p>
 <blockquote>
-<p>⚠️ 請避免在瀏覽器編輯 google 文件、google 試算表以外的檔案。</p>
+<p>&#x26A0;&#xFE0F; &#x8ACB;&#x4E0D;&#x8981;&#x5C07; google &#x6587;&#x4EF6;&#x53E6;&#x5B58;&#x70BA; WORD &#x6A94; (.doc, .docx)<br>
+&#x26A0;&#xFE0F; &#x8ACB;&#x4E0D;&#x8981;&#x7528; google &#x6587;&#x4EF6;&#x958B;&#x555F;&#x65E2;&#x6709; WORD &#x6A94;<br>
+&#x1F4A1; &#x5982;&#x679C;&#x60A8;&#x60F3;&#x8981;&#x4F7F;&#x7528; WORD &#x7DE8;&#x8F2F;&#xFF0C;&#x8ACB;&#x4F9D;&#x5FAA; <a href="#%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%AB%AF%E6%93%8D%E4%BD%9C%E8%88%87%E7%B7%A8%E8%BC%AF">&#x5728;&#x672C;&#x5730;&#x7AEF;&#x64CD;&#x4F5C;&#x8207;&#x7DE8;&#x8F2F;</a> &#x64CD;&#x4F5C;&#xFF0C;&#x5728;&#x672C;&#x5730;&#x65B0;&#x589E; WORD &#x6A94;&#x6848;&#x3002;</p>
 </blockquote>
-<h3 id="%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%AB%AF%E6%93%8D%E4%BD%9C%E8%88%87%E7%B7%A8%E8%BC%AF" tabindex="-1"><a class="anchor" href="#%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%AB%AF%E6%93%8D%E4%BD%9C%E8%88%87%E7%B7%A8%E8%BC%AF" aria-hidden="true"><span class="octicon octicon-link"></span></a> 在本地端操作與編輯</h3>
-<p>設置要求：</p>
+<p>&#x975E;&#x5E38;&#x611F;&#x8B1D;&#x60A8;&#x7684;&#x8010;&#x5FC3;&#x95B1;&#x8B80;&#x8207;&#x914D;&#x5408; &#x1F647;&#x200D;&#x2642;&#xFE0F;&#x1F647;&#x200D;&#x2642;&#xFE0F;&#x1F647;&#x200D;&#x2642;&#xFE0F;</p>
+<h2 class="mume-header" id="%E7%B7%A8%E8%BC%AF">&#x7DE8;&#x8F2F;</h2>
+
+<p>&#x8ACB;&#x53C3;&#x8003;[#&#x5206;&#x5DE5;&#x6982;&#x89BD;] &#x4EE5;&#x53CA;&#xFF0C;<a href="#2022-10-26">&#x5167;&#x90E8;&#x8A0E;&#x8AD6; 2022-10-26</a>&#x7684;&#x7D50;&#x8AD6;&#xFF0C;&#x64B0;&#x5BEB;&#x76F8;&#x95DC;&#x5167;&#x5BB9;&#x3002;</p>
+<h3 class="mume-header" id="%E5%9C%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E6%93%8D%E4%BD%9C%E8%88%87%E7%B7%A8%E8%BC%AF">&#x5728;&#x700F;&#x89BD;&#x5668;&#x64CD;&#x4F5C;&#x8207;&#x7DE8;&#x8F2F;</h3>
+
+<p>&#x6587;&#x672C;&#x7DE8;&#x8F2F;</p>
 <ul>
-<li>您的電腦需已安裝 <a href="https://www.google.com/intl/zh-TW_tw/drive/download/">雲端硬碟電腦版</a>，並在該應用程式中，以您可存取 TWAI 共用資料夾的 google 帳號登入。</li>
-<li>您可能需要額外設定，使本地端存在 <code>\TWAI\TWAI 土壤水相關內部討論\</code> 資料夾並與藉由 <a href="https://www.google.com/intl/zh-TW_tw/drive/download/">雲端硬碟電腦版</a> 應用程式與雲端保持同步。</li>
-<li>如需技術支援請洽宗羲。</li>
+<li>&#x4EE5;&#x700F;&#x89BD;&#x5668;&#x958B;&#x555F;<a href="https://drive.google.com/drive/folders/1XY_vdeaVPidS00I_7p4S6mSBtTrc4VDS?usp=sharing">&#x5171;&#x7528;&#x8CC7;&#x6599;&#x593E;</a> (&#x9700;&#x767B;&#x5165;&#x60A8;&#x53EF;&#x5B58;&#x53D6; TWAI &#x5171;&#x7528;&#x8CC7;&#x6599;&#x593E;&#x7684; google &#x5E33;&#x865F;)</li>
+<li>&#x6709;&#x88AB;&#x5177;&#x9AD4;&#x5206;&#x914D;&#x5DE5;&#x4F5C;&#x7684;&#x6210;&#x54E1;&#xFF1A;
+<ul>
+<li>&#x9EDE;&#x64CA; Manuscript&#x958B;&#x982D;&#x7684; .gdoc &#x6A94;&#x6848; (&#x4F8B;&#x5982;&#xFF0C;<code>Manuscript-&#x937E;&#x5B5F;&#x5112;</code>)&#x958B;&#x59CB;&#x7DE8;&#x8F2F;&#x3002;</li>
 </ul>
-<p>文本編輯：</p>
+</li>
+<li>&#x9084;&#x6C92;&#x88AB;&#x5177;&#x9AD4;&#x5206;&#x914D;&#x5DE5;&#x4F5C;&#x7684;&#x6210;&#x54E1;&#xFF1A;
 <ul>
-<li>待同步完成後，進入 <code>\TWAI\TWAI 土壤水相關內部討論\SUSCOM_2022\</code> 資料夾</li>
-<li>接著，按照您平常在電腦的操作方式新增資料夾、打開檔案、編輯與存檔。
+<li>&#x9EDE;&#x64CA;&#x5DE6;&#x4E0A;&#x89D2;(google&#x96F2;&#x7AEF;&#x786C;&#x789F;&#x6A19;&#x8A8C;&#x4E0B;&#x65B9;)&#x7684;&#x65B0;&#x589E;&#x6309;&#x9215;&#xFF0C;&#x65B0;&#x589E;&#x65B0;&#x7684; google &#x6587;&#x4EF6;&#x5F8C;&#x958B;&#x59CB;&#x7DE8;&#x8F2F;&#x3002;</li>
+</ul>
+</li>
+<li>&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x85C9;&#x7531;&#x8A3B;&#x89E3;&#x65BC;&#x4ED6;&#x4EBA;&#x7684; google &#x6587;&#x4EF6;&#x9032;&#x884C;&#x6E9D;&#x901A;&#x3002;</li>
+</ul>
 <blockquote>
-<p>⚠️ 一般來說，點擊本地端的 google 文件 (.gdoc) 會將您導向至 https://docs.google.com/document... 網頁。此時請依循<a href="#%E5%9C%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E6%93%8D%E4%BD%9C%E8%88%87%E7%B7%A8%E8%BC%AF">在瀏覽器操作與編輯</a>的指引。</p>
+<p>&#x26A0;&#xFE0F; &#x8ACB;&#x907F;&#x514D;&#x5728;&#x700F;&#x89BD;&#x5668;&#x7DE8;&#x8F2F; google &#x6587;&#x4EF6;&#x3001;google &#x8A66;&#x7B97;&#x8868;&#x4EE5;&#x5916;&#x7684;&#x6A94;&#x6848;&#x3002;</p>
+</blockquote>
+<h3 class="mume-header" id="%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%AB%AF%E6%93%8D%E4%BD%9C%E8%88%87%E7%B7%A8%E8%BC%AF">&#x5728;&#x672C;&#x5730;&#x7AEF;&#x64CD;&#x4F5C;&#x8207;&#x7DE8;&#x8F2F;</h3>
+
+<p>&#x8A2D;&#x7F6E;&#x8981;&#x6C42;&#xFF1A;</p>
+<ul>
+<li>&#x60A8;&#x7684;&#x96FB;&#x8166;&#x9700;&#x5DF2;&#x5B89;&#x88DD; <a href="https://www.google.com/intl/zh-TW_tw/drive/download/">&#x96F2;&#x7AEF;&#x786C;&#x789F;&#x96FB;&#x8166;&#x7248;</a>&#xFF0C;&#x4E26;&#x5728;&#x8A72;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x4E2D;&#xFF0C;&#x4EE5;&#x60A8;&#x53EF;&#x5B58;&#x53D6; TWAI &#x5171;&#x7528;&#x8CC7;&#x6599;&#x593E;&#x7684; google &#x5E33;&#x865F;&#x767B;&#x5165;&#x3002;</li>
+<li>&#x60A8;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x984D;&#x5916;&#x8A2D;&#x5B9A;&#xFF0C;&#x4F7F;&#x672C;&#x5730;&#x7AEF;&#x5B58;&#x5728; <code>\TWAI\TWAI &#x571F;&#x58E4;&#x6C34;&#x76F8;&#x95DC;&#x5167;&#x90E8;&#x8A0E;&#x8AD6;\</code> &#x8CC7;&#x6599;&#x593E;&#x4E26;&#x8207;&#x85C9;&#x7531; <a href="https://www.google.com/intl/zh-TW_tw/drive/download/">&#x96F2;&#x7AEF;&#x786C;&#x789F;&#x96FB;&#x8166;&#x7248;</a> &#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x8207;&#x96F2;&#x7AEF;&#x4FDD;&#x6301;&#x540C;&#x6B65;&#x3002;</li>
+<li>&#x5982;&#x9700;&#x6280;&#x8853;&#x652F;&#x63F4;&#x8ACB;&#x6D3D;&#x5B97;&#x7FB2;&#x3002;</li>
+</ul>
+<p>&#x6587;&#x672C;&#x7DE8;&#x8F2F;&#xFF1A;</p>
+<ul>
+<li>&#x5F85;&#x540C;&#x6B65;&#x5B8C;&#x6210;&#x5F8C;&#xFF0C;&#x9032;&#x5165; <code>\TWAI\TWAI &#x571F;&#x58E4;&#x6C34;&#x76F8;&#x95DC;&#x5167;&#x90E8;&#x8A0E;&#x8AD6;\SUSCOM_2022\</code> &#x8CC7;&#x6599;&#x593E;</li>
+<li>&#x63A5;&#x8457;&#xFF0C;&#x6309;&#x7167;&#x60A8;&#x5E73;&#x5E38;&#x5728;&#x96FB;&#x8166;&#x7684;&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&#x65B0;&#x589E;&#x8CC7;&#x6599;&#x593E;&#x3001;&#x6253;&#x958B;&#x6A94;&#x6848;&#x3001;&#x7DE8;&#x8F2F;&#x8207;&#x5B58;&#x6A94;&#x3002;
+<blockquote>
+<p>&#x26A0;&#xFE0F; &#x4E00;&#x822C;&#x4F86;&#x8AAA;&#xFF0C;&#x9EDE;&#x64CA;&#x672C;&#x5730;&#x7AEF;&#x7684; google &#x6587;&#x4EF6; (.gdoc) &#x6703;&#x5C07;&#x60A8;&#x5C0E;&#x5411;&#x81F3; <a href="https://docs.google.com/document">https://docs.google.com/document</a>... &#x7DB2;&#x9801;&#x3002;&#x6B64;&#x6642;&#x8ACB;&#x4F9D;&#x5FAA;<a href="#%E5%9C%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E6%93%8D%E4%BD%9C%E8%88%87%E7%B7%A8%E8%BC%AF">&#x5728;&#x700F;&#x89BD;&#x5668;&#x64CD;&#x4F5C;&#x8207;&#x7DE8;&#x8F2F;</a>&#x7684;&#x6307;&#x5F15;&#x3002;</p>
 </blockquote>
 </li>
-<li>若您選擇將內容以純文字檔 (例如附檔名為 <code>.txt</code>, <code>.md</code>, <code>.tex</code>等) 編輯並儲存，而不是使用 WORD，宗羲會很開心。使用純文字編輯時，請參照 <a href="#%E9%81%B8%E6%93%87%E6%80%A7-%E5%9C%96%E8%A1%A8%E8%88%87%E6%96%B9%E7%A8%8B%E5%BC%8F%E4%BA%A4%E4%BA%92%E5%8F%83%E7%85%A7%E6%8C%87%E5%8D%97">圖表與方程式交互參照指南</a></li>
+<li>&#x82E5;&#x60A8;&#x9078;&#x64C7;&#x5C07;&#x5167;&#x5BB9;&#x4EE5;&#x7D14;&#x6587;&#x5B57;&#x6A94; (&#x4F8B;&#x5982;&#x9644;&#x6A94;&#x540D;&#x70BA; <code>.txt</code>, <code>.md</code>, <code>.tex</code>&#x7B49;) &#x7DE8;&#x8F2F;&#x4E26;&#x5132;&#x5B58;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F7F;&#x7528; WORD&#xFF0C;&#x5B97;&#x7FB2;&#x6703;&#x5F88;&#x958B;&#x5FC3;&#x3002;&#x4F7F;&#x7528;&#x7D14;&#x6587;&#x5B57;&#x7DE8;&#x8F2F;&#x6642;&#xFF0C;&#x8ACB;&#x53C3;&#x7167; <a href="#%E9%81%B8%E6%93%87%E6%80%A7-%E5%9C%96%E8%A1%A8%E8%88%87%E6%96%B9%E7%A8%8B%E5%BC%8F%E4%BA%A4%E4%BA%92%E5%8F%83%E7%85%A7%E6%8C%87%E5%8D%97">&#x5716;&#x8868;&#x8207;&#x65B9;&#x7A0B;&#x5F0F;&#x4EA4;&#x4E92;&#x53C3;&#x7167;&#x6307;&#x5357;</a></li>
 </ul>
-<h3 id="%E5%9C%96%E7%89%87%E8%88%87%E8%A1%A8%E6%A0%BC" tabindex="-1"><a class="anchor" href="#%E5%9C%96%E7%89%87%E8%88%87%E8%A1%A8%E6%A0%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a> 圖片與表格</h3>
-<p>注意事項：</p>
+<h3 class="mume-header" id="%E5%9C%96%E7%89%87%E8%88%87%E8%A1%A8%E6%A0%BC">&#x5716;&#x7247;&#x8207;&#x8868;&#x683C;</h3>
+
+<p>&#x6CE8;&#x610F;&#x4E8B;&#x9805;&#xFF1A;</p>
 <blockquote>
-<p>⚠️ 圖片或表格皆需以<strong>獨立檔案另存一份</strong>至同一個子資料夾下(即名稱為您的姓名之資料夾)。
-⚠️ 表格如使用 excel 檔存放，請一個表格一個檔案，避免多個表格於同一檔案(不同sheet中)。</p>
+<p>&#x26A0;&#xFE0F; &#x5716;&#x7247;&#x6216;&#x8868;&#x683C;&#x7686;&#x9700;&#x4EE5;<strong>&#x7368;&#x7ACB;&#x6A94;&#x6848;&#x53E6;&#x5B58;&#x4E00;&#x4EFD;</strong>&#x81F3;&#x540C;&#x4E00;&#x500B;&#x5B50;&#x8CC7;&#x6599;&#x593E;&#x4E0B;(&#x5373;&#x540D;&#x7A31;&#x70BA;&#x60A8;&#x7684;&#x59D3;&#x540D;&#x4E4B;&#x8CC7;&#x6599;&#x593E;)&#x3002;<br>
+&#x26A0;&#xFE0F; &#x8868;&#x683C;&#x5982;&#x4F7F;&#x7528; excel &#x6A94;&#x5B58;&#x653E;&#xFF0C;&#x8ACB;&#x4E00;&#x500B;&#x8868;&#x683C;&#x4E00;&#x500B;&#x6A94;&#x6848;&#xFF0C;&#x907F;&#x514D;&#x591A;&#x500B;&#x8868;&#x683C;&#x65BC;&#x540C;&#x4E00;&#x6A94;&#x6848;(&#x4E0D;&#x540C;sheet&#x4E2D;)&#x3002;</p>
 </blockquote>
-<p>可以的話，避免易與他人重複的檔案命名</p>
+<p>&#x53EF;&#x4EE5;&#x7684;&#x8A71;&#xFF0C;&#x907F;&#x514D;&#x6613;&#x8207;&#x4ED6;&#x4EBA;&#x91CD;&#x8907;&#x7684;&#x6A94;&#x6848;&#x547D;&#x540D;</p>
 <ul>
-<li>建議範例: <code>fig_swc01.png</code> 、 <code>tab_infeat.xlsx</code></li>
-<li>不建議範例： <code>f01.png</code>, <code>f02.png</code>, <code>table1.csv</code></li>
+<li>&#x5EFA;&#x8B70;&#x7BC4;&#x4F8B;: <code>fig_swc01.png</code> &#x3001; <code>tab_infeat.xlsx</code></li>
+<li>&#x4E0D;&#x5EFA;&#x8B70;&#x7BC4;&#x4F8B;&#xFF1A; <code>f01.png</code>, <code>f02.png</code>, <code>table1.csv</code></li>
 </ul>
-<h4 id="%E9%81%B8%E6%93%87%E6%80%A7-%E5%9C%96%E8%A1%A8%E8%88%87%E6%96%B9%E7%A8%8B%E5%BC%8F%E4%BA%A4%E4%BA%92%E5%8F%83%E7%85%A7%E6%8C%87%E5%8D%97" tabindex="-1"><a class="anchor" href="#%E9%81%B8%E6%93%87%E6%80%A7-%E5%9C%96%E8%A1%A8%E8%88%87%E6%96%B9%E7%A8%8B%E5%BC%8F%E4%BA%A4%E4%BA%92%E5%8F%83%E7%85%A7%E6%8C%87%E5%8D%97" aria-hidden="true"><span class="octicon octicon-link"></span></a> 選擇性-圖表與方程式交互參照指南</h4>
-<p>您可以參照以下原則進行圖、表或方程式的交互參照，但不強制。</p>
-<h5 id="%E5%9C%96%E8%88%87%E8%A1%A8" tabindex="-1"><a class="anchor" href="#%E5%9C%96%E8%88%87%E8%A1%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a> 圖與表</h5>
-<p>圖與表請另存新檔於您的名字的資料夾下；引用時，請直接複製檔名。</p>
-<p>例如：</p>
+<h4 class="mume-header" id="%E9%81%B8%E6%93%87%E6%80%A7-%E5%9C%96%E8%A1%A8%E8%88%87%E6%96%B9%E7%A8%8B%E5%BC%8F%E4%BA%A4%E4%BA%92%E5%8F%83%E7%85%A7%E6%8C%87%E5%8D%97">&#x9078;&#x64C7;&#x6027;-&#x5716;&#x8868;&#x8207;&#x65B9;&#x7A0B;&#x5F0F;&#x4EA4;&#x4E92;&#x53C3;&#x7167;&#x6307;&#x5357;</h4>
+
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x53C3;&#x7167;&#x4EE5;&#x4E0B;&#x539F;&#x5247;&#x9032;&#x884C;&#x5716;&#x3001;&#x8868;&#x6216;&#x65B9;&#x7A0B;&#x5F0F;&#x7684;&#x4EA4;&#x4E92;&#x53C3;&#x7167;&#xFF0C;&#x4F46;&#x4E0D;&#x5F37;&#x5236;&#x3002;</p>
+<h5 class="mume-header" id="%E5%9C%96%E8%88%87%E8%A1%A8">&#x5716;&#x8207;&#x8868;</h5>
+
+<p>&#x5716;&#x8207;&#x8868;&#x8ACB;&#x53E6;&#x5B58;&#x65B0;&#x6A94;&#x65BC;&#x60A8;&#x7684;&#x540D;&#x5B57;&#x7684;&#x8CC7;&#x6599;&#x593E;&#x4E0B;&#xFF1B;&#x5F15;&#x7528;&#x6642;&#xFF0C;&#x8ACB;&#x76F4;&#x63A5;&#x8907;&#x88FD;&#x6A94;&#x540D;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
 <ul>
 <li>As displayed in <code>fig_swc01.png</code>, soil water content ...</li>
 <li>The parameters we used in this trial is listed in Table <code>tab_param.csv</code></li>
 <li>The input features in the training stage is demonstrated in Table <code>tab_infeat.xlsx</code></li>
 </ul>
 <blockquote>
-<p>💡交互參照時不一定要保留副檔名</p>
+<p>&#x1F4A1;&#x4EA4;&#x4E92;&#x53C3;&#x7167;&#x6642;&#x4E0D;&#x4E00;&#x5B9A;&#x8981;&#x4FDD;&#x7559;&#x526F;&#x6A94;&#x540D;</p>
 </blockquote>
-<h5 id="%E6%96%B9%E7%A8%8B%E5%BC%8F" tabindex="-1"><a class="anchor" href="#%E6%96%B9%E7%A8%8B%E5%BC%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a> 方程式</h5>
+<h5 class="mume-header" id="%E6%96%B9%E7%A8%8B%E5%BC%8F">&#x65B9;&#x7A0B;&#x5F0F;</h5>
+
 <ul>
-<li>圖片檔
+<li>&#x5716;&#x7247;&#x6A94;
 <ul>
-<li>交互參照時比照 <a href="#%E5%9C%96%E8%88%87%E8%A1%A8">圖與表</a>。例如："As displayed in Eq. <code>eq_01.png</code>, ..."</li>
+<li>&#x4EA4;&#x4E92;&#x53C3;&#x7167;&#x6642;&#x6BD4;&#x7167; <a href="#%E5%9C%96%E8%88%87%E8%A1%A8">&#x5716;&#x8207;&#x8868;</a>&#x3002;&#x4F8B;&#x5982;&#xFF1A;&quot;As displayed in Eq. <code>eq_01.png</code>, ...&quot;</li>
 </ul>
 </li>
-<li><a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX 數學語法</a>
+<li><a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX &#x6578;&#x5B78;&#x8A9E;&#x6CD5;</a>
 <ul>
-<li>公式尾端以 <code>\label{...}</code> 標註，交互參照時以 <code>\ref{...}</code> 引用。例如：<pre><code>The following equation shows Newton's 2nd law:
+<li>&#x516C;&#x5F0F;&#x5C3E;&#x7AEF;&#x4EE5; <code>\label{...}</code> &#x6A19;&#x8A3B;&#xFF0C;&#x4EA4;&#x4E92;&#x53C3;&#x7167;&#x6642;&#x4EE5; <code>\ref{...}</code> &#x5F15;&#x7528;&#x3002;&#x4F8B;&#x5982;&#xFF1A;<pre data-role="codeBlock" data-info class="language-"><code>The following equation shows Newton&apos;s 2nd law:
 
 F = ma \label{eq_2ndlaw}
 
 As displayed in \ref{eq_2ndlaw}, ...
-</code></pre>
-</li>
+</code></pre></li>
 </ul>
 </li>
 </ul>
-<h2 id="%E5%8F%83%E8%80%83%E6%96%87%E7%8D%BB" tabindex="-1"><a class="anchor" href="#%E5%8F%83%E8%80%83%E6%96%87%E7%8D%BB" aria-hidden="true"><span class="octicon octicon-link"></span></a> 參考文獻</h2>
+<h2 class="mume-header" id="%E5%8F%83%E8%80%83%E6%96%87%E7%8D%BB">&#x53C3;&#x8003;&#x6587;&#x737B;</h2>
+
 <ul>
-<li>在<a href="https://drive.google.com/drive/folders/1XY_vdeaVPidS00I_7p4S6mSBtTrc4VDS?usp=sharing">主資料夾</a>中，有設置<a href="https://drive.google.com/drive/folders/1_yYp2ah7p_lnSGjY-TZpgkyVspVeti4q?usp=sharing">參考文獻</a>的資料夾供放置 pdf 檔案。</li>
-<li>方便的話請您在同一文件的最後或者新開獨立檔案，附上內容有被引用過的文獻鏈結。</li>
+<li>&#x5728;<a href="https://drive.google.com/drive/folders/1XY_vdeaVPidS00I_7p4S6mSBtTrc4VDS?usp=sharing">&#x4E3B;&#x8CC7;&#x6599;&#x593E;</a>&#x4E2D;&#xFF0C;&#x6709;&#x8A2D;&#x7F6E;<a href="https://drive.google.com/drive/folders/1_yYp2ah7p_lnSGjY-TZpgkyVspVeti4q?usp=sharing">&#x53C3;&#x8003;&#x6587;&#x737B;</a>&#x7684;&#x8CC7;&#x6599;&#x593E;&#x4F9B;&#x653E;&#x7F6E; pdf &#x6A94;&#x6848;&#x3002;</li>
+<li>&#x65B9;&#x4FBF;&#x7684;&#x8A71;&#x8ACB;&#x60A8;&#x5728;&#x540C;&#x4E00;&#x6587;&#x4EF6;&#x7684;&#x6700;&#x5F8C;&#x6216;&#x8005;&#x65B0;&#x958B;&#x7368;&#x7ACB;&#x6A94;&#x6848;&#xFF0C;&#x9644;&#x4E0A;&#x5167;&#x5BB9;&#x6709;&#x88AB;&#x5F15;&#x7528;&#x904E;&#x7684;&#x6587;&#x737B;&#x93C8;&#x7D50;&#x3002;</li>
 </ul>
-<h2 id="%E5%85%A7%E9%83%A8%E8%A8%8E%E8%AB%96%E4%BE%8B%E6%9C%83" tabindex="-1"><a class="anchor" href="#%E5%85%A7%E9%83%A8%E8%A8%8E%E8%AB%96%E4%BE%8B%E6%9C%83" aria-hidden="true"><span class="octicon octicon-link"></span></a> 內部討論/例會</h2>
-<h3 id="2022-10-26" tabindex="-1"><a class="anchor" href="#2022-10-26" aria-hidden="true"><span class="octicon octicon-link"></span></a> 2022-10-26</h3>
-<p>目標期刊</p>
+<h2 class="mume-header" id="%E5%88%86%E5%B7%A5%E6%A6%82%E8%A6%BD">&#x5206;&#x5DE5;&#x6982;&#x89BD;</h2>
+
+<p>&#x9673;&#x6C9B;&#x82AB;</p>
+<ul>
+<li>part of introduction and discussion</li>
+<li>&#x8A73;&#x898B; <a href="https://docs.google.com/document/d/19l3MgkAGRhQqz2akin7eVNjY6uqBZW-29UvFYb5ZnAE/edit?usp=sharing">Manuscript-&#x9673;&#x6C9B;&#x82AB;.gdoc</a></li>
+</ul>
+<p>&#x937E;&#x5B5F;&#x5112;</p>
+<ul>
+<li>data</li>
+<li>&#x8A73;&#x898B; <a href="https://docs.google.com/document/d/1G9Rp9hLcK2rt9dE2M2Q4w5j3-56OEOIQe_0_SQ6lNs0/edit?usp=sharing">Manuscript-&#x937E;&#x5B5F;&#x5112;.gdoc</a></li>
+</ul>
+<p>&#x5433;&#x5B97;&#x7FB2;</p>
+<ul>
+<li>method, results and the rest of introduction and discussion section</li>
+</ul>
+<h2 class="mume-header" id="%E5%85%A7%E9%83%A8%E8%A8%8E%E8%AB%96%E4%BE%8B%E6%9C%83">&#x5167;&#x90E8;&#x8A0E;&#x8AD6;/&#x4F8B;&#x6703;</h2>
+
+<h3 class="mume-header" id="2022-10-26">2022-10-26</h3>
+
+<p>&#x76EE;&#x6A19;&#x671F;&#x520A;</p>
 <ul>
 <li><a href="https://www.sciencedirect.com/journal/sustainable-computing-informatics-and-systems">SUSCOM</a>
 <ul>
 <li><a href="https://www.sciencedirect.com/journal/sustainable-computing-informatics-and-systems/about/call-for-papers#sustainable-computing-based-smart-agriculture">Special Issue: Sustainable Computing based Smart Agriculture</a></li>
-<li>完稿送出期限： 2023-Jan-31</li>
 </ul>
 </li>
 </ul>
-<p>作者(暫定)</p>
+<p>&#x4F5C;&#x8005;(&#x66AB;&#x5B9A;)</p>
 <ul>
-<li>通訊作者：陳沛芫老師</li>
-<li>第一作者：吳宗羲</li>
-<li>共同作者：陳建志、鍾孟儒等(待確定)</li>
+<li>&#x901A;&#x8A0A;&#x4F5C;&#x8005;&#xFF1A;&#x9673;&#x6C9B;&#x82AB;&#x8001;&#x5E2B;</li>
+<li>&#x7B2C;&#x4E00;&#x4F5C;&#x8005;&#xFF1A;&#x5433;&#x5B97;&#x7FB2;</li>
+<li>&#x5171;&#x540C;&#x4F5C;&#x8005;&#xFF1A;&#x9673;&#x5EFA;&#x5FD7;&#x3001;&#x937E;&#x5B5F;&#x5112;&#x7B49;(&#x5F85;&#x78BA;&#x5B9A;)</li>
 </ul>
-<p>水文模式：</p>
+<p>&#x6C34;&#x6587;&#x6A21;&#x5F0F;&#xFF1A;</p>
 <ul>
-<li>特徵時間</li>
-<li>半衰期</li>
-<li>氣象坪水力傳導係數</li>
+<li>&#x7279;&#x5FB5;&#x6642;&#x9593;</li>
+<li>&#x534A;&#x8870;&#x671F;</li>
+<li>&#x6C23;&#x8C61;&#x576A;&#x6C34;&#x529B;&#x50B3;&#x5C0E;&#x4FC2;&#x6578;</li>
 </ul>
-<p>時間尺度：</p>
+<p>&#x6642;&#x9593;&#x5C3A;&#x5EA6;&#xFF1A;</p>
 <ul>
-<li>一小時</li>
-<li>在文中基本上使用估計 (estimate) 字眼；未來展望再使用預測(predict) 或 預報 (forecast) 字眼。</li>
-</ul>
-<h3 id="2022-11-23" tabindex="-1"><a class="anchor" href="#2022-11-23" aria-hidden="true"><span class="octicon octicon-link"></span></a> 2022-11-23</h3>
-<h4 id="%E8%A8%8E%E8%AB%96%E8%A6%81%E9%BB%9E" tabindex="-1"><a class="anchor" href="#%E8%A8%8E%E8%AB%96%E8%A6%81%E9%BB%9E" aria-hidden="true"><span class="octicon octicon-link"></span></a> 討論要點</h4>
-<p>什麼是"表現好"</p>
-<ul>
-<li>需定義什麼是表現好。在進行相關討論之前，須建立"表現好壞"的參照基準。</li>
-<li>本文之基準：考慮農用容許度的絕對誤差(單位是$M^3/M^3$ in %)</li>
-<li>表現的"好"與"壞"在文中需謹慎及精確
-<ul>
-<li>例如，10 cm 與 100 cm 深的 "MAE = 5 (SWC %)"，應代表不同的預測表現，因兩者基準值及變動程度不同</li>
-<li>在多數讀者的理解上，好或壞通常是基於<strong>相較於基準值</strong>的相對誤差(例 MAPE，無單位，是誤差與基準值的百分比， ($\frac{\hat{y}-y}{y}$))</li>
-<li>審稿人可能會問為什麼 30-50 cm 的表現較好。</li>
-</ul>
-</li>
-</ul>
-<p>特徵關聯性分析(資料探索)</p>
-<ul>
-<li>變數間若為時間序列、有時間上的相關性，則 Pearson correlation 會是高估值</li>
-<li>Pearson correlation 使用前提為 "每一筆資料配對皆獨立"</li>
-<li>可改用 cross-correlation matrix: 計算 correlation function (CF) 並取 CF 的第一個值作為熱力圖色階。這樣的作法在時間序列上較能被接受。</li>
-</ul>
-<p>交互驗證分析</p>
-<ul>
-<li>以量化描述 (e.g., MAE 增加 2.5 %) 取代投影片中的定性描述 (e.g., 表現明顯降低)</li>
-<li>需以農用的脈絡，賦予例如前項 "2.5 %" 意義。</li>
-</ul>
-<p>變數的選擇</p>
-<ul>
-<li>對於決策樹演算法，放無用變數不太會有負面影響。</li>
-<li>對於其他常見的演算法或模型，引入無用/低貢獻變數可能會增加結果的變異性，造成預測上的負面影響。</li>
-<li>決策樹在形成(訓練)的過程中，演算法實質上進行了一定程度之變數篩選。</li>
-</ul>
-<h4 id="%E7%9B%B8%E9%97%9C%E5%B7%A5%E4%BD%9C%E5%88%86%E6%B4%BE%E5%82%99%E5%BF%98%E9%8C%84" tabindex="-1"><a class="anchor" href="#%E7%9B%B8%E9%97%9C%E5%B7%A5%E4%BD%9C%E5%88%86%E6%B4%BE%E5%82%99%E5%BF%98%E9%8C%84" aria-hidden="true"><span class="octicon octicon-link"></span></a> 相關工作分派備忘錄</h4>
-<ul>
-<li>吳宗羲：
-<ul>
-<li>✅ 使用決策樹/機器學習相關方法對單一種類的特徵進行貢獻度/重要性分析</li>
-<li>✅ 使用 MAPE 再做一次各深度/特徵組合的表現分析</li>
-<li>新的 correlation matrix using cross correlation</li>
-</ul>
-</li>
-<li>王俞凱：
-<ul>
-<li>例如畫太陽輻射與雨量的cross-correlation function 圖，就特徵在不同時間平移方面的交互關聯性進行探討。</li>
-</ul>
-</li>
-<li>陳沛芫：
-<ul>
-<li>承先前工作，以農業角度建立起 MAE 誤差百分比的參考點。</li>
-<li>例如，對於什麼類別的作物、在什麼深度範圍的SWC，MAE 5% 內是夠用/好的；目的是建立起在進行"表現好壞"相關探討時的參照基準。</li>
-</ul>
-</li>
-</ul>
-<h3 id="2022-12-21" tabindex="-1"><a class="anchor" href="#2022-12-21" aria-hidden="true"><span class="octicon octicon-link"></span></a> 2022-12-21</h3>
-<h4 id="%E8%A8%8E%E8%AB%96%E8%AD%B0%E9%A1%8C%E6%91%98%E8%A6%81" tabindex="-1"><a class="anchor" href="#%E8%A8%8E%E8%AB%96%E8%AD%B0%E9%A1%8C%E6%91%98%E8%A6%81" aria-hidden="true"><span class="octicon octicon-link"></span></a> 討論議題摘要</h4>
-<ol>
-<li>延時對模型表現的影響 ("時間平移多長才夠")</li>
-<li>特徵重要性分析結果 (三種特徵重要性評估模型)</li>
-</ol>
-<h4 id="%E8%AD%B0%E9%A1%8C1-%E5%BB%B6%E6%99%82%E5%B0%8D%E6%A8%A1%E5%9E%8B%E8%A1%A8%E7%8F%BE%E7%9A%84%E5%BD%B1%E9%9F%BF-%E5%9C%96xx" tabindex="-1"><a class="anchor" href="#%E8%AD%B0%E9%A1%8C1-%E5%BB%B6%E6%99%82%E5%B0%8D%E6%A8%A1%E5%9E%8B%E8%A1%A8%E7%8F%BE%E7%9A%84%E5%BD%B1%E9%9F%BF-%E5%9C%96xx" aria-hidden="true"><span class="octicon octicon-link"></span></a> 議題1: 延時對模型表現的影響 (圖XX)</h4>
-<ul>
-<li>就淺部(10-50cm)MAE 較快收斂、深部(70-100cm)較晚收斂，在土壤水力機制的脈絡下進行探討。(沛芫老師、宗羲)</li>
-<li>🔲 以圖 XX 的 "only precip." (僅使用降雨量及其導出量)的特徵和設置，再做一張同樣的圖(輔助降雨延時在不同深度SWC的影響的議題探討)。(宗羲)</li>
-<li>🔲 可就10-50cm、70-100cm深度分兩組，畫輔助的回歸線。</li>
-</ul>
-<p>!!! warning
-請注意本區塊的討論與 "split importance" 部分關於延時(time shift)的相關討論的一致性。</p>
-<h4 id="%E8%AD%B0%E9%A1%8C2-%E7%89%B9%E5%BE%B5%E9%87%8D%E8%A6%81%E6%80%A7%E5%88%86%E6%9E%90" tabindex="-1"><a class="anchor" href="#%E8%AD%B0%E9%A1%8C2-%E7%89%B9%E5%BE%B5%E9%87%8D%E8%A6%81%E6%80%A7%E5%88%86%E6%9E%90" aria-hidden="true"><span class="octicon octicon-link"></span></a> 議題2: 特徵重要性分析</h4>
-<p>要點</p>
-<ul>
-<li>僅基於 split importance 的結果撰文</li>
-<li>impurity importance, permutation importance的結果為未來工作</li>
-<li>主要放在方法與結果。</li>
-<li><strong>目的</strong>是利用此指標<strong>對降雨延時進行探討</strong>，非篩選特徵。</li>
-<li>在描述split importance量度時，需加強澄清，避免讀者誤解本研究目的在利用此工具篩選特徵與最佳化模型。</li>
-</ul>
-<h4 id="%E5%85%B6%E4%BB%96%E9%9B%9C%E9%A0%85%E5%B7%A5%E4%BD%9C" tabindex="-1"><a class="anchor" href="#%E5%85%B6%E4%BB%96%E9%9B%9C%E9%A0%85%E5%B7%A5%E4%BD%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a> 其他雜項工作</h4>
-<ul>
-<li>🔲 將 split importance (normalized) 除以 12 (fold數)，使得所見數值即為百分比 (總合為 1)。</li>
-</ul>
-<h2 id="%E6%96%87%E7%AB%A0%E6%9E%B6%E6%A7%8B-2023-01-09-%E6%9B%B4%E6%96%B0" tabindex="-1"><a class="anchor" href="#%E6%96%87%E7%AB%A0%E6%9E%B6%E6%A7%8B-2023-01-09-%E6%9B%B4%E6%96%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a> 文章架構 (2023-01-09 更新)</h2>
-<h3 id="%E7%B7%92%E8%AB%96" tabindex="-1"><a class="anchor" href="#%E7%B7%92%E8%AB%96" aria-hidden="true"><span class="octicon octicon-link"></span></a> 緒論</h3>
-<ul>
-<li>發展土壤水含量估計方法的重要性</li>
-<li>估計土壤水的農業價值... <strong># TODO: 視情況增加</strong></li>
-<li>(物理上) 測量土壤水含量的方法有… <strong># TODO: 陳沛芫老師</strong></li>
-<li>從傳統上近地表水流數值模擬方法帶到近期機器學習(ML)相關應用大量興起</li>
-<li>相比數值方法，ML的優勢；ML 的分類 (“shallow” 及 “deep”)；兩者在土壤水含量估計的應用範例</li>
-<li>從 shallow ML 適合的場景到為何使用決策樹 <strong># FIXME: need attention; complete it after discussion finished</strong>
-<ul>
-<li>可解釋性高</li>
-<li>資料驅動來探討土壤水背後物理機制</li>
-</ul>
-</li>
-<li>在本研究中，我們以決策樹應用於土壤水含量估計的任務場景上，探索在常規估計的演算流程中同時獲得(與更新?)地下水文動力學的資訊的可能性。</li>
-<li>分類、分觀測時間統計訓練好的模型標籤數量以探討大氣現象與地下水文動力反應之間的延時效應</li>
-</ul>
-<h3 id="%E8%B3%87%E6%96%99" tabindex="-1"><a class="anchor" href="#%E8%B3%87%E6%96%99" aria-hidden="true"><span class="octicon octicon-link"></span></a> 資料</h3>
-<ul>
-<li>資料與場址 <strong># TODO: 孟儒</strong></li>
-<li>資料的基本探索—交互關聯性</li>
-</ul>
-<h3 id="%E6%96%B9%E6%B3%95" tabindex="-1"><a class="anchor" href="#%E6%96%B9%E6%B3%95" aria-hidden="true"><span class="octicon octicon-link"></span></a> 方法</h3>
-<ul>
-<li>決策樹簡介；提到從訓練好的模型中提取資訊
-<ul>
-<li>"split importance (SI)" 在文中為 "split counts"，不出現 "importance" 這個字以避免誤會</li>
-<li>雨量與1hr累積雨量SI很低可由共線性解釋(相關矩陣顯示雨量、累積雨量的交相關性很高)</li>
-<li>此量度在本文的目的與用意 (對降雨延時進行探討，非篩選特徵) <strong># TODO: not yet emphasized</strong></li>
-<li>向讀者介紹其他的重要性分析方式 <strong># TODO: not yet mentioned</strong></li>
-</ul>
-</li>
-<li>輸入與目標(反應)特徵、如何時間平移</li>
-<li>模型的有效性(validity)評估方式</li>
-</ul>
-<h3 id="%E8%A8%8E%E8%AB%96" tabindex="-1"><a class="anchor" href="#%E8%A8%8E%E8%AB%96" aria-hidden="true"><span class="octicon octicon-link"></span></a> 討論</h3>
-<ul>
-<li>計算效率</li>
-<li>時間平移“longer” 組別的擬合結果與TSCV表現</li>
-<li>“baseline” 組別與 “longer”、“denser” 組別的比較；探討剔除某變量後對土壤水估計的影響。</li>
-<li>土壤機制與延時效應的探討 <strong># TODO: 陳沛芫</strong></li>
-</ul>
-<h3 id="%E7%B5%90%E8%AB%96" tabindex="-1"><a class="anchor" href="#%E7%B5%90%E8%AB%96" aria-hidden="true"><span class="octicon octicon-link"></span></a> 結論</h3>
-<blockquote>
-<p>(暫定，最後再完成)</p>
-</blockquote>
-<p>決策樹方法應用在土壤水評估方面</p>
-<ul>
-<li>效果堪用 (以農用為基準)</li>
-<li>使用最多表列特徵()</li>
-<li>未來可往隨機森林發展，bagging + ensemble 可應對 over fitting 問題</li>
-</ul>
-<p>未來工作</p>
-<ul>
-<li>Over-fitting 議題：可提到在決策樹方法中是如何處理此議題，但非本研究重點。</li>
-</ul>
-<h2 id="my-checklist-for-submission" tabindex="-1"><a class="anchor" href="#my-checklist-for-submission" aria-hidden="true"><span class="octicon octicon-link"></span></a> My Checklist for submission</h2>
-<ul>
-<li>🔲 Check the style/format for your manuscript file (<code>main.pdf</code>)</li>
-<li>🔲 There is an item called <em>Highlights</em>, figure out its format.</li>
-<li>🔲 Cover letter is required</li>
-<li>🔲 Conflict of interest (seemingly to be <code>declarationStatement.docx</code>)</li>
+<li>&#x4E00;&#x5C0F;&#x6642;</li>
+<li>&#x5728;&#x6587;&#x4E2D;&#x57FA;&#x672C;&#x4E0A;&#x4F7F;&#x7528;&#x4F30;&#x8A08; (estimate) &#x5B57;&#x773C;&#xFF1B;&#x672A;&#x4F86;&#x5C55;&#x671B;&#x518D;&#x4F7F;&#x7528;&#x9810;&#x6E2C;(predict) &#x6216; &#x9810;&#x5831; (forecast) &#x5B57;&#x773C;&#x3002;</li>
 </ul>
 
-		</main>
-	</body>
-</html>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
